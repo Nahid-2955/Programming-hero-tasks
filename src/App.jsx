@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import CustomerTickets from './components/CustomerTickets.jsx'
 import TaskStatus from './components/TaskStatus.jsx'
 
@@ -8,10 +8,13 @@ const fetchCards = async () => {
   const res = await fetch('/cards.json');
   return res.json();
 }
-
-function App() {
   const cardsPromise = fetchCards();
 
+
+function App() {
+const [QueryTasks, setQueryTasks] = useState([])
+console.log(QueryTasks);
+  
   return (
     <>
      <div className='nav_head flex justify-between max-w-400 mx-auto my-7'>
@@ -41,14 +44,14 @@ function App() {
      <div className='main_body'>
       <div className='cards_container'><p className='text-2xl font-bold'>Customer Tickets</p>
         <div>
-          <Suspense fallback={<div>Loading...</div>}>
-            <CustomerTickets cardsPromise={cardsPromise}></CustomerTickets>
+          <Suspense fallback={<div className='loading loading-spinner loading-xl'> Loading....</div>}>
+            <CustomerTickets cardsPromise={cardsPromise} QueryTasks={QueryTasks} setQueryTasks={setQueryTasks} ></CustomerTickets>
           </Suspense>
         </div>
       </div>
       <div className='status'><p className='text-2xl font-bold'>Task Status</p>
         <div>
-          <TaskStatus></TaskStatus>
+          <TaskStatus QueryTasks={QueryTasks} setQueryTasks={setQueryTasks}></TaskStatus>
         </div>
       </div>
      </div>

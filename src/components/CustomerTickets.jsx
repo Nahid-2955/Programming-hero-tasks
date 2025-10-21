@@ -1,8 +1,9 @@
 import React, {use} from 'react';
 
-const CustomerTickets = ({cardsPromise}) => {
+const CustomerTickets = ({cardsPromise,setQueryTasks}) => {
     const cards = use(cardsPromise);
-    console.log(cards);
+    const inProgress=() =>  cards.filter(card => card.status === 'in progress').length;  
+    console.log(inProgress());
 
     return (
 
@@ -11,14 +12,14 @@ const CustomerTickets = ({cardsPromise}) => {
             {
                 cards.map(card => (
                     <div key={card.id} className="card bg-base-100 w-120 shadow-xl">
-                    <div className="card-body px-6 py-3">
+                    <div className="card-body px-6 py-3 rounded-md">
                         <div className='flex justify-between my-2'>
                             <div><h2 className='text-xl font-bold'>{card.issue_name}</h2></div>
-                            <div>{card.status}</div>
+                            <div className={`py-2 px-3 rounded-2xl ${card.status === 'open'? 'bg-green-300': 'bg-yellow-200'}`}>{card.status}</div>
                         </div>
-                        <p>{card.short_details}</p>
+                        <p><button onClick={() => setQueryTasks(prev => [...prev, card])}>{card.short_details}</button></p>
                         <div className='flex justify-between items-center mt-3'>
-                            <div>{card.id} <span className='ml-2'> </span>  {card.priority} Priority</div>
+                            <div>{card.id} <span className='ml-2 text-red-600'> {card.priority} Priority</span>  </div>
                             <div className='flex gap-3'>
                                 <p>{card.customer_name}</p>
                                 <p>{card.issue_posted_date}</p>
