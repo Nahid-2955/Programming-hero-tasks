@@ -2,8 +2,6 @@ import React, {use} from 'react';
 
 const CustomerTickets = ({cardsPromise,setQueryTasks}) => {
     const cards = use(cardsPromise);
-    const inProgress=() =>  cards.filter(card => card.status === 'in progress').length;  
-    console.log(inProgress());
 
     return (
 

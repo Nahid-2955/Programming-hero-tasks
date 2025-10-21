@@ -40,8 +40,25 @@
   margin: auto;
   display: flex;
   gap: 20px;
+  align-items: top;
 }
 
 .cards_container{
   width: 1100px;
+}
+
+.status{
+  width: 400px;
+  height: fit-content;
+  box-shadow: black 1px 2px 5px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.resolve{
+  width: 400px;
+  height: fit-content;
+  box-shadow: black 1px 2px 5px;
+  padding: 20px;
+  border-radius: 5px;
 }

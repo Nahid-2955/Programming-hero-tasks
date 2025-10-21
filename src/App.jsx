@@ -1,6 +1,7 @@
 import { Suspense, useState } from 'react'
 import CustomerTickets from './components/CustomerTickets.jsx'
 import TaskStatus from './components/TaskStatus.jsx'
+import Resolved from './components/Resolved.jsx'
 
 import './App.css'
 
@@ -13,7 +14,7 @@ const fetchCards = async () => {
 
 function App() {
 const [QueryTasks, setQueryTasks] = useState([])
-console.log(QueryTasks);
+const [resolvedTasks, setResolvedTasks] = useState([])
   
   return (
     <>
@@ -34,11 +35,11 @@ console.log(QueryTasks);
      <div className='counting-cards flex justify-center gap-10 my-15'>
         <div className='card1'>
           <p className='text-2xl'>In-Progress</p>
-          <p className=''></p>
+          <p className='text-3xl'>{QueryTasks.length}</p>
         </div>
         <div className='card2'>
           <p className='text-2xl'>Resolved</p>
-          <p className=''></p>
+          <p className='text-3xl'>{resolvedTasks.length}</p>
         </div>
      </div>
      <div className='main_body'>
@@ -49,11 +50,19 @@ console.log(QueryTasks);
           </Suspense>
         </div>
       </div>
-      <div className='status'><p className='text-2xl font-bold'>Task Status</p>
-        <div>
-          <TaskStatus QueryTasks={QueryTasks} setQueryTasks={setQueryTasks}></TaskStatus>
+      <div className='flex flex-col gap-7'>
+        <div className='status'><p className='text-2xl font-bold'>Task Status</p>
+          <div>
+            <TaskStatus QueryTasks={QueryTasks} setQueryTasks={setQueryTasks} resolvedTasks={resolvedTasks} setResolvedTasks={setResolvedTasks}></TaskStatus>
+          </div>
+        </div>
+        <div className='resolve'><p className='text-2xl font-bold'>Resolved Task</p>
+          <div>
+            <Resolved resolvedTasks={resolvedTasks} setResolvedTasks={setResolvedTasks}></Resolved>
+          </div>
         </div>
       </div>
+
      </div>
     </>
   )
