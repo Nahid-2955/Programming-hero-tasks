@@ -1,4 +1,5 @@
 import React, {use} from 'react';
+import { toast } from 'react-toastify';
 
 const CustomerTickets = ({cardsPromise,setQueryTasks}) => {
     const cards = use(cardsPromise);
@@ -15,7 +16,10 @@ const CustomerTickets = ({cardsPromise,setQueryTasks}) => {
                             <div><h2 className='text-xl font-bold'>{card.issue_name}</h2></div>
                             <div className={`py-2 px-3 rounded-2xl ${card.status === 'open'? 'bg-green-300': 'bg-yellow-200'}`}>{card.status}</div>
                         </div>
-                        <p><button onClick={() => setQueryTasks(prev => [...prev, card])}>{card.short_details}</button></p>
+                        <p><button onClick={() => {
+                            toast("Task Added to In-Progress!");
+                            setQueryTasks(prev => [...prev, card]);
+                        }}>{card.short_details}</button></p>
                         <div className='flex justify-between items-center mt-3'>
                             <div>{card.id} <span className='ml-2 text-red-600'> {card.priority} Priority</span>  </div>
                             <div className='flex gap-3'>

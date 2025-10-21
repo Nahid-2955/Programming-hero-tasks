@@ -1,13 +1,13 @@
 import React from 'react';
 import './Resolved';
 import Resolved from './Resolved';
+import { toast } from 'react-toastify';
 
 const TaskStatus = ({QueryTasks, setQueryTasks, setResolvedTasks}) => {
     const removeTask = (taskId) => {
         setQueryTasks(prev => prev.filter(task => task.id !== taskId));
     };
    
-
     return (
         <div>
             {QueryTasks.map(task => (
@@ -18,6 +18,7 @@ const TaskStatus = ({QueryTasks, setQueryTasks, setResolvedTasks}) => {
                         </div>
                         <button 
                             onClick={() => {
+                                toast("Task Completed!");
                                 removeTask(task.id);
                                 setResolvedTasks(prev => [...prev, task]);
                             }}

@@ -4,6 +4,8 @@ import TaskStatus from './components/TaskStatus.jsx'
 import Resolved from './components/Resolved.jsx'
 
 import './App.css'
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 const fetchCards = async () => {
   const res = await fetch('/cards.json');
@@ -64,6 +66,7 @@ const [resolvedTasks, setResolvedTasks] = useState([])
       </div>
 
      </div>
+  <ToastContainer />
     </>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { toast } from 'react-toastify';
 const Resolved = ({ resolvedTasks, setResolvedTasks }) => {
 
     const removeResolve = (taskId) => {
@@ -16,7 +16,10 @@ const Resolved = ({ resolvedTasks, setResolvedTasks }) => {
                             <h3 className='text-lg font-semibold'>{task.issue_name}</h3>
                         </div>
                         <button 
-                            onClick={() => removeResolve(task.id)}
+                            onClick={() => {
+                                toast("Task Removed!");
+                                removeResolve(task.id);
+                            }}
                             className="text-white bg-green-600 w-full py-3 rounded-2xl"
                             title="Remove task"
                         >
