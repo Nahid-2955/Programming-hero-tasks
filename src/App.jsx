@@ -1,8 +1,16 @@
-
+import { Suspense } from 'react'
+import CustomerTickets from './components/CustomerTickets.jsx'
+import TaskStatus from './components/TaskStatus.jsx'
 
 import './App.css'
 
+const fetchCards = async () => {
+  const res = await fetch('/cards.json');
+  return res.json();
+}
+
 function App() {
+  const cardsPromise = fetchCards();
 
   return (
     <>
@@ -31,8 +39,18 @@ function App() {
         </div>
      </div>
      <div className='main_body'>
-      <div className='cards'><p className='text-2xl font-bold'>Customer Tickets</p></div>
-      <div className='status'><p className='text-2xl font-bold'>Task Status</p></div>
+      <div className='cards_container'><p className='text-2xl font-bold'>Customer Tickets</p>
+        <div>
+          <Suspense fallback={<div>Loading...</div>}>
+            <CustomerTickets cardsPromise={cardsPromise}></CustomerTickets>
+          </Suspense>
+        </div>
+      </div>
+      <div className='status'><p className='text-2xl font-bold'>Task Status</p>
+        <div>
+          <TaskStatus></TaskStatus>
+        </div>
+      </div>
      </div>
     </>
   )

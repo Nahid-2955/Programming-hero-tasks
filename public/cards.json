@@ -1,0 +1,110 @@
+[
+  {
+    "id": "#1001",
+    "customer_name": "Alice Johnson",
+    "issue_name": "Password Reset Failure",
+    "issue_posted_date": "2025-10-15",
+    "short_details": "User cannot reset password via login page.",
+    "status": "open",
+    "priority": "high"
+  },
+  {
+    "id": "#1002",
+    "customer_name": "Bob Smith",
+    "issue_name": "Slow Website",
+    "issue_posted_date": "2025-10-18",
+    "short_details": "Website experiences slow load times at peak traffic.",
+    "status": "in progress",
+    "priority": "medium"
+  },
+  {
+    "id": "#1003",
+    "customer_name": "Clara Zhang",
+    "issue_name": "Missing Confirmation Emails",
+    "issue_posted_date": "2025-10-19",
+    "short_details": "Customers do not receive email confirmations post order.",
+    "status": "open",
+    "priority": "high"
+  },
+  {
+    "id": "#1004",
+    "customer_name": "David Lee",
+    "issue_name": "App Crash on Update",
+    "issue_posted_date": "2025-10-20",
+    "short_details": "Mobile app crashes after latest update installation.",
+    "status": "in progress",
+    "priority": "high"
+  },
+  {
+    "id": "#1005",
+    "customer_name": "Eva Martinez",
+    "issue_name": "Dark Mode Request",
+    "issue_posted_date": "2025-10-21",
+    "short_details": "Customer requested dark mode feature for interface.",
+    "status": "open",
+    "priority": "low"
+  },
+  {
+    "id": "#1006",
+    "customer_name": "Frank Wilson",
+    "issue_name": "Billing Error",
+    "issue_posted_date": "2025-10-16",
+    "short_details": "Incorrect charges applied to monthly invoice.",
+    "status": "open",
+    "priority": "high"
+  },
+  {
+    "id": "#1007",
+    "customer_name": "Grace Kim",
+    "issue_name": "Login Timeout",
+    "issue_posted_date": "2025-10-17",
+    "short_details": "User session times out too quickly on login.",
+    "status": "in progress",
+    "priority": "medium"
+  },
+  {
+    "id": "#1008",
+    "customer_name": "Henry Adams",
+    "issue_name": "Feature Bug",
+    "issue_posted_date": "2025-10-19",
+    "short_details": "Search filter not applying correct parameters.",
+    "status": "open",
+    "priority": "medium"
+  },
+  {
+    "id": "#1009",
+    "customer_name": "Isabella Clark",
+    "issue_name": "Order Delay",
+    "issue_posted_date": "2025-10-20",
+    "short_details": "Shipment delayed beyond estimated delivery date.",
+    "status": "in progress",
+    "priority": "high"
+  },
+  {
+    "id": "#1010",
+    "customer_name": "Jack Miller",
+    "issue_name": "UI Glitch",
+    "issue_posted_date": "2025-10-21",
+    "short_details": "Dropdown menu fails to open on mobile devices.",
+    "status": "open",
+    "priority": "medium"
+  },
+  {
+    "id": "#1011",
+    "customer_name": "Karen Lopez",
+    "issue_name": "Account Suspension",
+    "issue_posted_date": "2025-10-18",
+    "short_details": "User account suspended without prior notification.",
+    "status": "open",
+    "priority": "high"
+  },
+  {
+    "id": "#1012",
+    "customer_name": "Liam Turner",
+    "issue_name": "Data Sync Issue",
+    "issue_posted_date": "2025-10-19",
+    "short_details": "App data not syncing properly across devices.",
+    "status": "in progress",
+    "priority": "medium"
+  }
+]
