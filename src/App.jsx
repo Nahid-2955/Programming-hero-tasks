@@ -19,9 +19,9 @@ const [resolvedTasks, setResolvedTasks] = useState([])
   return (
     <>
      <div className='nav_head flex justify-between max-w-400 mx-auto my-7'>
-        <div><p className='font-bold text-2xl'>CS-Ticket System</p></div>
+        <div><p className='font-bold text-xl md:text-2xl'>CS-Ticket System</p></div>
         <div>
-          <ul className='flex gap-8 items-center'>
+          <ul className='flex gap-8 items-center list'>
             <li>Home</li>
             <li>FAQ</li>
             <li>Changelog</li>

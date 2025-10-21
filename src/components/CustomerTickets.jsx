@@ -6,10 +6,10 @@ const CustomerTickets = ({cardsPromise,setQueryTasks}) => {
     return (
 
         
-        <div className='grid grid-cols-2 gap-4'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             {
                 cards.map(card => (
-                    <div key={card.id} className="card bg-base-100 w-120 shadow-xl">
+                    <div key={card.id} className="card bg-base-100 w-107 md:w-120 shadow-xl">
                     <div className="card-body px-6 py-3 rounded-md">
                         <div className='flex justify-between my-2'>
                             <div><h2 className='text-xl font-bold'>{card.issue_name}</h2></div>
