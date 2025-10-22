@@ -78,7 +78,7 @@
     width: 100%;
     justify-content: space-evenly;
   }
-  
+
   .cards_container{
     width: 100%;
   }
@@ -102,6 +102,7 @@
   .footer{
     max-width: 100%;
   }
+
   
   .nav_head{
     gap:0px;
