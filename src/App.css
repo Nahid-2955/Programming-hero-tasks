@@ -67,6 +67,8 @@
   margin-bottom: 15px;
 }
 
+
+
 @media screen and (max-width: 600px) {
   .main_body{
     flex-direction: column;
@@ -74,6 +76,7 @@
   }
   .counting-cards{
     width: 100%;
+    justify-content: space-evenly;
   }
   
   .cards_container{
@@ -88,6 +91,24 @@
   .main_body{
     flex-direction: column;
   }
+
+  .footer_section{
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+
+  }
+
+  .footer{
+    max-width: 100%;
+  }
   
-  
+  .nav_head{
+    gap:0px;
+  }
+
+  .list{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
 }
