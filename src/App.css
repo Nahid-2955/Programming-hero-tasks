@@ -63,6 +63,10 @@
   border-radius: 5px;
 }
 
+.gap-5 li {
+  margin-bottom: 15px;
+}
+
 @media screen and (max-width: 600px) {
   .main_body{
     flex-direction: column;
